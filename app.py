@@ -2,7 +2,6 @@ import streamlit as st
 import re
 import random
 import string
-import pyperclip  # Clipboard ke liye
 
 st.set_page_config(page_title="🔒 STRONG PASSWORD GENERATOR")
 
@@ -60,12 +59,14 @@ if value > 5:
         generated_password = st.session_state.generated_password
         st.text_input("Generated Password", generated_password, key="password_display")
 
-        # **Copy Button**
-        if st.button("📋 Copy to Clipboard"):
-            pyperclip.copy(generated_password)
-            st.success("✅ Password copied to clipboard!")
-
 else:
     st.warning("⚠️ Please select a password length greater than 5.")
+
+
+
+
+
+
+
 
 
